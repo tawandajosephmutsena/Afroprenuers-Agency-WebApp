@@ -18,16 +18,25 @@ class CalendarWidget extends BaseWidget
     public function getEvents(array $fetchInfo = []): Collection|array
     {
         return \App\Models\Event::query()
+            ->when(
+                $fetchInfo['start'] ?? null,
+                fn ($query, $start) => $query->where('start', '>=', $start)
+            )
+            ->when(
+                $fetchInfo['end'] ?? null,
+                fn ($query, $end) => $query->where('end', '<=', $end)
+            )
             ->get()
             ->map(function ($event) {
-                return Event::make()
+                return Event::make($event)
                     ->title($event->title)
-                    ->description($event->description)
+                    ->extendedProp('description', $event->description)
                     ->start($event->start)
                     ->end($event->end)
                     ->backgroundColor($event->background_color)
                     ->textColor($event->text_color)
-                    ->allDay($event->all_day);
+                    ->allDay($event->all_day)
+                    ->url(route('filament.admin.resources.events.edit', ['record' => $event]));
             });
     }
 }

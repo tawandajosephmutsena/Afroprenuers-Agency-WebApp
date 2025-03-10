@@ -30,6 +30,9 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
+                \Filament\Forms\Components\Hidden::make('user_id')
+                    ->default(fn () => auth()->user()->id)
+                    ->required(),
                 TextInput::make('title')
                     ->required()
                     ->maxLength(255),
