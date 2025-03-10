@@ -5,6 +5,7 @@ namespace App\Filament\Widgets;
 use Guava\Calendar\Widgets\CalendarWidget as BaseWidget;
 use Guava\Calendar\ValueObjects\Event;
 use Illuminate\Support\Collection;
+use App\Models\Task;
 
 class CalendarWidget extends BaseWidget
 {
@@ -17,7 +18,7 @@ class CalendarWidget extends BaseWidget
 
     public function getEvents(array $fetchInfo = []): Collection|array
     {
-        return \App\Models\Event::query()
+        $events = \App\Models\Event::query()
             ->when(
                 $fetchInfo['start'] ?? null,
                 fn ($query, $start) => $query->where('start', '>=', $start)
@@ -38,5 +39,36 @@ class CalendarWidget extends BaseWidget
                     ->allDay($event->all_day)
                     ->url(route('filament.admin.resources.events.edit', ['record' => $event]));
             });
+
+        $tasks = Task::query()
+            ->whereNotNull('due_date')
+            ->when(
+                $fetchInfo['start'] ?? null,
+                fn ($query, $start) => $query->where('due_date', '>=', $start)
+            )
+            ->when(
+                $fetchInfo['end'] ?? null,
+                fn ($query, $end) => $query->where('due_date', '<=', $end)
+            )
+            ->get()
+            ->map(function ($task) {
+                $color = match ($task->status) {
+                    'completed' => '#10B981', // Green
+                    'in_progress' => '#3B82F6', // Blue
+                    default => '#F59E0B', // Yellow
+                };
+
+                return Event::make($task)
+                    ->title($task->title)
+                    ->extendedProp('description', $task->description)
+                    ->start($task->due_date)
+                    ->end($task->due_date)
+                    ->backgroundColor($color)
+                    ->textColor('#FFFFFF')
+                    ->allDay(true)
+                    ->url(route('filament.admin.resources.tasks.edit', ['record' => $task]));
+            });
+
+        return $events->concat($tasks);
     }
 }
