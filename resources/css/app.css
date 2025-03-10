@@ -1,0 +1,25 @@
+[x-cloak] {
+    display: none !important;
+}
+
+@import '../../node_modules/cropperjs/dist/cropper.css';
+@import '../../vendor/awcodes/filament-curator/resources/css/plugin.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* resources/css/app.css */
+.task-item {
+    transition: all 0.3s ease;
+}
+
+.task-item.is-dragging {
+    opacity: 0.5;
+}
+
+.task-item.can-drop {
+    border-color: #4CAF50;
+}
+
+
