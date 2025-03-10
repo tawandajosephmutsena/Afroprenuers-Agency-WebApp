@@ -17,21 +17,17 @@ class CalendarWidget extends BaseWidget
 
     public function getEvents(array $fetchInfo = []): Collection|array
     {
-        return [
-            Event::make()
-                ->title('Example Event')
-                ->start(today())
-                ->end(today()->addDays(2))
-                ->backgroundColor('#4CAF50')
-                ->textColor('#ffffff'),
-
-            Event::make()
-                ->title('Another Event')
-                ->start(today()->addDays(5))
-                ->end(today()->addDays(7))
-                ->backgroundColor('#2196F3')
-                ->textColor('#ffffff')
-                ->allDay(),
-        ];
+        return \App\Models\Event::query()
+            ->get()
+            ->map(function ($event) {
+                return Event::make()
+                    ->title($event->title)
+                    ->description($event->description)
+                    ->start($event->start)
+                    ->end($event->end)
+                    ->backgroundColor($event->background_color)
+                    ->textColor($event->text_color)
+                    ->allDay($event->all_day);
+            });
     }
 }
