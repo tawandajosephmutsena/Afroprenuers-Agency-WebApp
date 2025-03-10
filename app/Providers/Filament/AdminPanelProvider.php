@@ -2,6 +2,8 @@
 
 namespace App\Providers\Filament;
 
+use BezhanSalleh\FilamentGoogleAnalytics\FilamentGoogleAnalyticsPlugin;
+
 
 use App\Filament\Pages\KanbanBoard;
 use Awcodes\Curator\CuratorPlugin;
@@ -109,6 +111,7 @@ class AdminPanelProvider extends PanelProvider
                ->sidebarCollapsibleOnDesktop()
 
             ->plugins([
+                FilamentGoogleAnalyticsPlugin::make(),
                 FilaSortablePlugin::make(),
                 FilamentGeneralSettingsPlugin::make()
                     ->canAccess(fn() => auth()->user()->id === 1)
