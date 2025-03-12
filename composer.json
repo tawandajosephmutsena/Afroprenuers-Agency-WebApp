@@ -28,7 +28,7 @@
         "spatie/cpu-load-health-check": "^1.0",
         "spatie/laravel-settings": "^3.4",
         "spatie/security-advisories-health-check": "^1.2",
-        "tomatophp/filament-invoices": "^1.0",
+         "tomatophp/filament-invoices": "^1.0",
         "z3d0x/filament-fabricator": "^2.2"
     },
     "require-dev": {
@@ -79,6 +79,22 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail\" \"npm run dev\" --names=server,queue,logs,vite"
+        ],
+        "optimize": [
+            "@php artisan config:cache",
+            "@php artisan route:cache",
+            "@php artisan view:cache",
+            "@php artisan event:cache",
+            "@php artisan filament:cache-components",
+            "npm run build"
+        ],
+        "optimize-dev": [
+            "@php artisan config:clear",
+            "@php artisan route:clear",
+            "@php artisan view:clear",
+            "@php artisan event:clear",
+            "@php artisan cache:clear",
+            "npm run dev"
         ]
     },
     "extra": {
