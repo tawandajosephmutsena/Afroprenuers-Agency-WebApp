@@ -13,7 +13,7 @@
                 @foreach($clientLogos as $logo)
                     <div class="item">
                         @if(isset($logo['logo']))
-                            <img 
+                            <img
                                 src="{{ $logo['logo'] }}"
                                 alt="{{ $logo['alt'] ?? 'Client logo' }}"
                                 loading="lazy"
