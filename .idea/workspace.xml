@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b81ae1-086f-4a02-8cf3-d161bdf49223" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Fabricator/PageBlocks/Hero03.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Fabricator/PageBlocks/Hero03.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filament-fabricator.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filament-fabricator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/filament-fabricator/page-blocks/clientLogo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/filament-fabricator/page-blocks/clientLogo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/filament-fabricator/page-blocks/hero03.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/filament-fabricator/page-blocks/hero03.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/588e955ade8dbdce5a62c0c03cf90cf6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/588e955ade8dbdce5a62c0c03cf90cf6.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +285,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741692862358</updated>
       <workItem from="1741692864226" duration="4316000" />
-      <workItem from="1741813151143" duration="7846000" />
+      <workItem from="1741813151143" duration="8480000" />
     </task>
     <servers />
   </component>

@@ -7,16 +7,14 @@
 
 $__newAttributes = [];
 $__propNames = \Illuminate\View\ComponentAttributeBag::extractPropNames(([
-'topButtonLink',
-'topbutton',
-'title',
-'content',
-'button01Link',
-'button01',
-
-'title02',
-
-'partnerLogos' => [],
+    'topButtonLink',
+    'topbutton',
+    'title',
+    'content',
+    'button01Link',
+    'button01',
+    'title02',
+    'partnerLogos' => [],
 ]));
 
 foreach ($attributes->all() as $__key => $__value) {
@@ -33,16 +31,14 @@ unset($__propNames);
 unset($__newAttributes);
 
 foreach (array_filter(([
-'topButtonLink',
-'topbutton',
-'title',
-'content',
-'button01Link',
-'button01',
-
-'title02',
-
-'partnerLogos' => [],
+    'topButtonLink',
+    'topbutton',
+    'title',
+    'content',
+    'button01Link',
+    'button01',
+    'title02',
+    'partnerLogos' => [],
 ]), 'is_string', ARRAY_FILTER_USE_KEY) as $__key => $__value) {
     $$__key = $$__key ?? $__value;
 }
@@ -54,6 +50,10 @@ foreach ($attributes->all() as $__key => $__value) {
 }
 
 unset($__defined_vars); ?>
+
+<?php
+    use Awcodes\Curator\Models\Media;
+?>
 
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
@@ -78,18 +78,20 @@ unset($__defined_vars); ?>
                     <?php $__currentLoopData = $partnerLogos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $logo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="item">
                             <?php if(isset($logo['logo'])): ?>
-                                <img
-                                    src="<?php echo e($logo['logo']); ?>"
-                                    alt="<?php echo e($logo['alt'] ?? 'Partner logo'); ?>"
-                                    loading="lazy"
-                                >
+                                <?php
+                                    $mediaItem = Media::find($logo['logo']);
+                                ?>
+                                <?php if($mediaItem): ?>
+                                    <img
+                                        src="<?php echo e(url('storage/' . $mediaItem->path)); ?>"
+                                        alt="<?php echo e($logo['alt'] ?? 'Partner logo'); ?>"
+                                        loading="lazy"
+                                        class="h-9 hover:text-gray-900"
+                                    >
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                <?php else: ?>
-                    <div class="col-span-full text-center text-gray-500">
-                        No partner logos available
-                    </div>
                 <?php endif; ?>
             </div>
         </div>

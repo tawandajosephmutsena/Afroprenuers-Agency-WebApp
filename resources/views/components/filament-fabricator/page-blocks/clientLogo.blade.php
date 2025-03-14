@@ -5,6 +5,10 @@
     'clientLogos' => [],
 ])
 
+@php
+    use Awcodes\Curator\Models\Media;
+@endphp
+
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
         <h2 class="mb-8 lg:mb-16 text-3xl font-bold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">{{ $heading }}</h2>
@@ -13,11 +17,17 @@
                 @foreach($clientLogos as $logo)
                     <div class="item">
                         @if(isset($logo['logo']))
-                            <img
-                                src="{{ $logo['logo'] }}"
-                                alt="{{ $logo['alt'] ?? 'Client logo' }}"
-                                loading="lazy"
-                            >
+                            @php
+                                $mediaItem = Media::find($logo['logo']);
+                            @endphp
+                            @if($mediaItem)
+                                <img
+                                    src="{{ url('storage/' . $mediaItem->path) }}"
+                                    alt="{{ $logo['alt'] ?? 'Client logo' }}"
+                                    loading="lazy"
+                                    class="h-12 max-w-full object-contain"
+                                >
+                            @endif
                         @endif
                     </div>
                 @endforeach

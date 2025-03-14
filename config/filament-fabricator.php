@@ -19,7 +19,8 @@ return [
         'namespace' => 'App\\Filament\\Fabricator\\PageBlocks',
         'path' => app_path('Filament/Fabricator/PageBlocks'),
         'register' => [
-            //
+            App\Filament\Fabricator\PageBlocks\Footer::class,
+            App\Filament\Fabricator\PageBlocks\BlogPosts::class, // Add this line
         ],
     ],
 
@@ -37,7 +38,7 @@ return [
 
     'page-resource' => \Z3d0X\FilamentFabricator\Resources\PageResource::class,
 
-    'enable-view-page' => false,
+    'enable-view-page' => true,
 
     /*
      * This is the name of the table that will be created by the migration and

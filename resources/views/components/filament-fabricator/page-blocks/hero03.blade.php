@@ -1,17 +1,19 @@
 @aware(['page'])
 
 @props([
-'topButtonLink',
-'topbutton',
-'title',
-'content',
-'button01Link',
-'button01',
-
-'title02',
-
-'partnerLogos' => [],
+    'topButtonLink',
+    'topbutton',
+    'title',
+    'content',
+    'button01Link',
+    'button01',
+    'title02',
+    'partnerLogos' => [],
 ])
+
+@php
+    use Awcodes\Curator\Models\Media;
+@endphp
 
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
@@ -36,18 +38,20 @@
                     @foreach($partnerLogos as $logo)
                         <div class="item">
                             @if(isset($logo['logo']))
-                                <img
-                                    src="{{ $logo['logo'] }}"
-                                    alt="{{ $logo['alt'] ?? 'Partner logo' }}"
-                                    loading="lazy"
-                                >
+                                @php
+                                    $mediaItem = Media::find($logo['logo']);
+                                @endphp
+                                @if($mediaItem)
+                                    <img
+                                        src="{{ url('storage/' . $mediaItem->path) }}"
+                                        alt="{{ $logo['alt'] ?? 'Partner logo' }}"
+                                        loading="lazy"
+                                        class="h-9 hover:text-gray-900"
+                                    >
+                                @endif
                             @endif
                         </div>
                     @endforeach
-                @else
-                    <div class="col-span-full text-center text-gray-500">
-                        No partner logos available
-                    </div>
                 @endif
             </div>
         </div>

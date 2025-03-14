@@ -23,8 +23,9 @@ return [
     'curation_presets' => [
         \Awcodes\Curator\Curations\ThumbnailPreset::class,
     ],
-    'directory' => 'media',
-    'disk' => env('FILAMENT_FILESYSTEM_DISK', 'public'),
+    'directory' => 'images', // Changed from 'media' to match your .env CURATOR_DIRECTORY
+    'disk' => env('CURATOR_DISK', 'public'), // Changed to use CURATOR_DISK from .env
+    
     'glide' => [
         'server' => \Awcodes\Curator\Glide\DefaultServerFactory::class,
         'fallbacks' => [],
@@ -52,7 +53,7 @@ return [
         'navigation_count_badge' => true,
         'resource' => \Awcodes\Curator\Resources\MediaResource::class,
     ],
-    'should_preserve_filenames' => false,
+    'should_preserve_filenames' => true, // Changed to true for better file management
     'should_register_navigation' => true,
     'should_check_exists' => true,
     'visibility' => 'public',

@@ -39,6 +39,10 @@ foreach ($attributes->all() as $__key => $__value) {
 
 unset($__defined_vars); ?>
 
+<?php
+    use Awcodes\Curator\Models\Media;
+?>
+
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
         <h2 class="mb-8 lg:mb-16 text-3xl font-bold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl"><?php echo e($heading); ?></h2>
@@ -47,11 +51,17 @@ unset($__defined_vars); ?>
                 <?php $__currentLoopData = $clientLogos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $logo): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="item">
                         <?php if(isset($logo['logo'])): ?>
-                            <img 
-                                src="<?php echo e($logo['logo']); ?>"
-                                alt="<?php echo e($logo['alt'] ?? 'Client logo'); ?>"
-                                loading="lazy"
-                            >
+                            <?php
+                                $mediaItem = Media::find($logo['logo']);
+                            ?>
+                            <?php if($mediaItem): ?>
+                                <img
+                                    src="<?php echo e(url('storage/' . $mediaItem->path)); ?>"
+                                    alt="<?php echo e($logo['alt'] ?? 'Client logo'); ?>"
+                                    loading="lazy"
+                                    class="h-12 max-w-full object-contain"
+                                >
+                            <?php endif; ?>
                         <?php endif; ?>
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
