@@ -1,50 +1,26 @@
+@props([
+    'data' => [],
+    'columns' => collect(),
+    'images' => collect(),
+])
 @aware(['page'])
+@php
+    use Awcodes\Curator\Models\Media;
+@endphp
 
 <section class="bg-white dark:bg-gray-900">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+        @foreach ($columns ?? [] as $column)
+            <div class="grid gap-4">
+                @foreach ($column['images'] ?? [] as $image)
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" 
+                            src="{{ $image['image_url'] }}" 
+                            alt="{{ $image['alt'] ?? '' }}"
+                            loading="lazy">
+                    </div>
+                @endforeach
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
-            </div>
-        </div>
-        <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-            </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-            </div>
-        </div>
+        @endforeach
     </div>
-    </section>
+</section>
