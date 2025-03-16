@@ -88,12 +88,15 @@
     </div>
 
 <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-  <!-- Grid -->
   <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
     <div>
-     <a href="{{ url('/') }}">
-         <img class="h-12 w-auto" src="{{ asset('storage/assets/site_logo.png') }}" alt="Site Logo">
-         </a>
+      <!-- Debug output -->
+      {{ var_dump($footerSettings) }}
+      {{ var_dump($footerSettings->logo) }}
+      
+      <a href="{{ url('/') }}">
+         <img class="h-12 w-auto" src="{{ Storage::url($footerSettings->logo) }}" alt="Site Logo">
+      </a>
     </div>
     <!-- End Col -->
     <ul class="text-center">

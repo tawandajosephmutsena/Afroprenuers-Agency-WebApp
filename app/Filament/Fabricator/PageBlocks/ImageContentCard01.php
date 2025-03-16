@@ -11,7 +11,7 @@ class ImageContentCard01 extends PageBlock
     {
         return Block::make('image-content-card01')
             ->schema([
-                //
+                
             ]);
     }
 

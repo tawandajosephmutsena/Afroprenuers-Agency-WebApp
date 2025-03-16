@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Client;
 use App\Models\User;
+use App\Models\FooterSettings;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Health\Facades\Health;
 use Spatie\Health\Checks\Checks\OptimizedAppCheck;
@@ -18,6 +19,7 @@ use Spatie\Health\Checks\Checks\CacheCheck;
 use TomatoPHP\FilamentInvoices\Facades\FilamentInvoices;
 use TomatoPHP\FilamentInvoices\Services\Contracts\InvoiceFor;
 use TomatoPHP\FilamentInvoices\Services\Contracts\InvoiceFrom;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -56,5 +58,8 @@ class AppServiceProvider extends ServiceProvider
                     ->label('Company')
             ]);
 
+            View::composer('layouts.base', function ($view) {
+                $view->with('footerSettings', FooterSettings::with('logo')->first());
+            });
     }
 }

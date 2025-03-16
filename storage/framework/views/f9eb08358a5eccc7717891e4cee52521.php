@@ -117,7 +117,7 @@ unset($__defined_vars); ?>
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="#" class="flex items-center">
-                    <img src="<?php echo e($footerSettings?->logo ? Storage::url($footerSettings->logo) : asset('storage/assets/site_logo.png')); ?>" class="h-8 me-3" alt="Site Logo" />
+                    <img src="<?php echo e($footerSettings?->logo ? \Awcodes\Curator\Models\Media::find($footerSettings->logo)->path : asset('storage/assets/site_logo.png')); ?>" class="h-16 me-3" alt="Site Logo" />
                 </a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

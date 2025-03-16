@@ -12,6 +12,7 @@ use Filament\Resources\Pages\Page;
 use Filament\Tables;
 use Filament\Forms\Components\Card;
 use Filament\Tables\Table;  // Update this import
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 class FooterSettingsResource extends Resource
 {
@@ -26,8 +27,9 @@ class FooterSettingsResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    Forms\Components\FileUpload::make('logo')
-                        ->image()
+                    CuratorPicker::make('logo')
+                        ->label('Footer Logo')
+                        ->acceptedFileTypes(['image/*'])
                         ->directory('footer')
                         ->maxSize(1024)
                         ->columnSpan('full'),

@@ -10,6 +10,7 @@ use Filament\Forms\Components\Textarea;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 
+
 class CarouselSlider01 extends PageBlock
 {
     public static function getBlockSchema(): Block

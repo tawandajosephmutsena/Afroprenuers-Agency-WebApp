@@ -1,1 +1,0 @@
-@livewire('sortable-action-component')
