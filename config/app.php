@@ -56,7 +56,8 @@ return [
         App\Providers\FilesystemServiceProvider::class,
         App\Providers\FilamentComponentServiceProvider::class,
         App\Providers\AccessibilityServiceProvider::class,
-        Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsServiceProvider::class,
+        // Temporarily commented out until package is properly installed
+        // JoaoPauloLnDev\FilamentGeneralSettings\FilamentGeneralSettingsProvider::class,
 
 
     ],

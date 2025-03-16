@@ -40,6 +40,8 @@ use Z3d0X\FilamentFabricator\Enums\BlockPickerStyle;
 use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
 
 
+
+
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -112,6 +114,7 @@ class AdminPanelProvider extends PanelProvider
 
             ->plugins([
                 FilamentGoogleAnalyticsPlugin::make(),
+              
                 FilaSortablePlugin::make(),
                 FilamentGeneralSettingsPlugin::make()
                     ->canAccess(fn() => auth()->user()->id === 1)

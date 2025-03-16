@@ -28,7 +28,7 @@
         "spatie/cpu-load-health-check": "^1.0",
         "spatie/laravel-settings": "^3.4",
         "spatie/security-advisories-health-check": "^1.2",
-         "tomatophp/filament-invoices": "^1.0",
+        "tomatophp/filament-invoices": "^1.0",
         "z3d0x/filament-fabricator": "^2.2"
     },
     "require-dev": {
