@@ -221,8 +221,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         ),
         'J' => 
         array (
-            'Joaopaulolndev\\FilamentGeneralSettings\\Database\\Factories\\' => 58,
-            'Joaopaulolndev\\FilamentGeneralSettings\\' => 39,
             'Joaopaulolndev\\FilamentEditProfile\\Database\\Factories\\' => 54,
             'Joaopaulolndev\\FilamentEditProfile\\' => 35,
             'Jenssegers\\Agent\\' => 17,
@@ -820,14 +818,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'Kirschbaum\\PowerJoins\\' => 
         array (
             0 => __DIR__ . '/..' . '/kirschbaum-development/eloquent-power-joins/src',
-        ),
-        'Joaopaulolndev\\FilamentGeneralSettings\\Database\\Factories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/database/factories',
-        ),
-        'Joaopaulolndev\\FilamentGeneralSettings\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src',
         ),
         'Joaopaulolndev\\FilamentEditProfile\\Database\\Factories\\' => 
         array (
@@ -6218,30 +6208,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'Joaopaulolndev\\FilamentEditProfile\\Livewire\\SanctumTokens' => __DIR__ . '/..' . '/joaopaulolndev/filament-edit-profile/src/Livewire/SanctumTokens.php',
         'Joaopaulolndev\\FilamentEditProfile\\Pages\\EditProfilePage' => __DIR__ . '/..' . '/joaopaulolndev/filament-edit-profile/src/Pages/EditProfilePage.php',
         'Joaopaulolndev\\FilamentEditProfile\\Testing\\TestsFilamentEditProfile' => __DIR__ . '/..' . '/joaopaulolndev/filament-edit-profile/src/Testing/TestsFilamentEditProfile.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Commands\\FilamentGeneralSettingsCommand' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Commands/FilamentGeneralSettingsCommand.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Enums\\EmailProviderEnum' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Enums/EmailProviderEnum.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Enums\\SocialNetworkEnum' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Enums/SocialNetworkEnum.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Enums\\TypeFieldEnum' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Enums/TypeFieldEnum.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Facades\\FilamentGeneralSettings' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Facades/FilamentGeneralSettings.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\FilamentGeneralSettings' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/FilamentGeneralSettings.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\FilamentGeneralSettingsPlugin' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/FilamentGeneralSettingsPlugin.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\FilamentGeneralSettingsServiceProvider' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/FilamentGeneralSettingsServiceProvider.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\AnalyticsFieldsForm' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/AnalyticsFieldsForm.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\ApplicationFieldsForm' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/ApplicationFieldsForm.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\CustomForms' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/CustomForms.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\EmailFieldsForm' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/EmailFieldsForm.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\SeoFieldsForm' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/SeoFieldsForm.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Forms\\SocialNetworkFieldsForm' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Forms/SocialNetworkFieldsForm.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Helpers\\EmailDataHelper' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Helpers/EmailDataHelper.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Helpers\\SocialNetworkDataHelper' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Helpers/SocialNetworkDataHelper.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Mail\\TestMail' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Mail/TestMail.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Middleware\\FilamentGeneralSettingsMiddleware' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Middleware/FilamentGeneralSettingsMiddleware.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Models\\GeneralSetting' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Models/GeneralSetting.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Pages\\GeneralSettingsPage' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Pages/GeneralSettingsPage.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Services\\GeneralSettingsService' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Services/GeneralSettingsService.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Services\\MailSettingsService' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Services/MailSettingsService.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Testing\\TestsFilamentGeneralSettings' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Testing/TestsFilamentGeneralSettings.php',
-        'Joaopaulolndev\\FilamentGeneralSettings\\Traits\\WithOptions' => __DIR__ . '/..' . '/joaopaulolndev/filament-general-settings/src/Traits/WithOptions.php',
         'Kirschbaum\\PowerJoins\\EloquentJoins' => __DIR__ . '/..' . '/kirschbaum-development/eloquent-power-joins/src/EloquentJoins.php',
         'Kirschbaum\\PowerJoins\\FakeJoinCallback' => __DIR__ . '/..' . '/kirschbaum-development/eloquent-power-joins/src/FakeJoinCallback.php',
         'Kirschbaum\\PowerJoins\\JoinsHelper' => __DIR__ . '/..' . '/kirschbaum-development/eloquent-power-joins/src/JoinsHelper.php',

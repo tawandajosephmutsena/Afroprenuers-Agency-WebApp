@@ -18,7 +18,6 @@
         "hasnayeen/themes": "^3.0",
         "ibrahimbougaoua/filasortable": "^1.0",
         "joaopaulolndev/filament-edit-profile": "^1.0",
-        "joaopaulolndev/filament-general-settings": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",

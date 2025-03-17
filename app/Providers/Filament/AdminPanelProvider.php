@@ -32,7 +32,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 use Joaopaulolndev\FilamentEditProfile\Pages\EditProfilePage;
-use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
+// Remove this line: use Joaopaulolndev\FilamentGeneralSettings\FilamentGeneralSettingsPlugin;
 use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use TomatoPHP\FilamentInvoices\FilamentInvoicesPlugin;
@@ -115,18 +115,9 @@ class AdminPanelProvider extends PanelProvider
 
             ->plugins([
                 FilamentGoogleAnalyticsPlugin::make(),
-              
                 FilaSortablePlugin::make(),
-                FilamentGeneralSettingsPlugin::make()
-                    ->canAccess(fn() => auth()->user()->id === 1)
-                    ->setSort(3)
-                    ->setIcon("heroicon-o-cog")
-                    ->setNavigationGroup("Settings")
-                    ->setTitle("General Settings")
-                    ->setNavigationLabel("General Settings"),
-
                 FilamentFabricatorPlugin::make()
-                ->blockPickerStyle(BlockPickerStyle::Modal),
+                    ->blockPickerStyle(BlockPickerStyle::Modal),
                 \TomatoPHP\FilamentInvoices\FilamentInvoicesPlugin::make(),
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 \Hasnayeen\Themes\ThemesPlugin::make(),

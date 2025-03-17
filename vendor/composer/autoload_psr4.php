@@ -126,8 +126,6 @@ return array(
     'Laravel\\Prompts\\' => array($vendorDir . '/laravel/prompts/src'),
     'Laravel\\Pail\\' => array($vendorDir . '/laravel/pail/src'),
     'Kirschbaum\\PowerJoins\\' => array($vendorDir . '/kirschbaum-development/eloquent-power-joins/src'),
-    'Joaopaulolndev\\FilamentGeneralSettings\\Database\\Factories\\' => array($vendorDir . '/joaopaulolndev/filament-general-settings/database/factories'),
-    'Joaopaulolndev\\FilamentGeneralSettings\\' => array($vendorDir . '/joaopaulolndev/filament-general-settings/src'),
     'Joaopaulolndev\\FilamentEditProfile\\Database\\Factories\\' => array($vendorDir . '/joaopaulolndev/filament-edit-profile/database/factories'),
     'Joaopaulolndev\\FilamentEditProfile\\' => array($vendorDir . '/joaopaulolndev/filament-edit-profile/src'),
     'Jenssegers\\Agent\\' => array($vendorDir . '/jenssegers/agent/src'),
