@@ -88,7 +88,6 @@ return array(
     'Spatie\\Analytics\\' => array($vendorDir . '/spatie/laravel-analytics/src'),
     'ShuvroRoy\\FilamentSpatieLaravelHealth\\' => array($vendorDir . '/shuvroroy/filament-spatie-laravel-health/src'),
     'ShuvroRoy\\FilamentSpatieLaravelBackup\\' => array($vendorDir . '/shuvroroy/filament-spatie-laravel-backup/src'),
-    'Shipu\\WebInstaller\\' => array($vendorDir . '/shipu/web-installer/src'),
     'RyanChandler\\BladeCaptureDirective\\Database\\Factories\\' => array($vendorDir . '/ryangjchandler/blade-capture-directive/database/factories'),
     'RyanChandler\\BladeCaptureDirective\\' => array($vendorDir . '/ryangjchandler/blade-capture-directive/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),

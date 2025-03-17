@@ -5,10 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b81ae1-086f-4a02-8cf3-d161bdf49223" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/an.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/an.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/database.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/0001_01_01_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/0001_01_01_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/0001_01_01_000001_create_cache_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/0001_01_01_000001_create_cache_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/0001_01_01_000002_create_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/0001_01_01_000002_create_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2022_12_14_083707_create_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_12_14_083707_create_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_11_25_144235_create_invoices_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_11_25_144235_create_invoices_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_11_25_144236_create_invoices_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_11_25_144236_create_invoices_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_11_25_144237_create_invoice_metas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_11_25_144237_create_invoice_metas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_11_26_144237_create_invoice_logs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_11_26_144237_create_invoice_logs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_01_10_000000_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_01_10_000000_create_events_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_102035_add_custom_fields_to_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_102035_add_custom_fields_to_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_104454_create_personal_access_tokens_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_104454_create_personal_access_tokens_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_105832_create_general-settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_105832_create_general-settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_105833_add_logo_favicon_columns_to_general_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_105833_add_logo_favicon_columns_to_general_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_110732_create_health_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_110732_create_health_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_113110_create_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_113110_create_media_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_113111_add_tenant_aware_column_to_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_113111_add_tenant_aware_column_to_media_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_115100_create_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_115100_create_pages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_19_115101_fix_slug_unique_constraint_on_pages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_19_115101_fix_slug_unique_constraint_on_pages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_20_120249_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_20_120249_create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_20_141242_add_featured_image_id_to_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_20_141242_add_featured_image_id_to_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_21_020028_create_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_21_020028_create_clients_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_21_021401_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_21_021401_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_21_022906_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_21_022906_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_21_142731_create_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_21_142731_create_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_21_151226_add_progress_to_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_21_151226_add_progress_to_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_24_080405_create_accessibility_preferences_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_24_080405_create_accessibility_preferences_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_25_204832_add_themes_settings_to_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_25_204832_add_themes_settings_to_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_25_222921_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_25_222921_create_services_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_25_222938_create_portfolios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_25_222938_create_portfolios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_25_224954_add_image_to_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_25_224954_add_image_to_services_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_113613_add_category_id_to_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_113613_add_category_id_to_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_155008_add_logo_and_favicon_to_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_155008_add_logo_and_favicon_to_settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_163828_insert_default_logo_favicon_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_163828_insert_default_logo_favicon_settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_185543_add_completed_at_to_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_185543_add_completed_at_to_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_205201_add_key_and_value_to_general_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_205201_add_key_and_value_to_general_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_26_220038_create_permission_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_26_220038_create_permission_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_27_074430_add_project_id_to_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_27_074430_add_project_id_to_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_03_100605_create_notifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_03_100605_create_notifications_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_03_100633_create_imports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_03_100633_create_imports_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_03_100634_create_exports_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_03_100634_create_exports_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_03_100635_create_failed_import_rows_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_03_100635_create_failed_import_rows_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_23_082617_upgrade_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_23_082617_upgrade_media_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_23_212056_add_title_to_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_23_212056_add_title_to_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_23_212635_create_note_tag_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_23_212635_create_note_tag_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_23_224138_make_comments_polymorphic.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_23_224138_make_comments_polymorphic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_23_225304_make_comments_polymorphic.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_23_225304_make_comments_polymorphic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_11_30_180534_add_task_id_to_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_11_30_180534_add_task_id_to_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_01_230935_add_assignee_id_to_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_01_230935_add_assignee_id_to_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_02_003746_sites_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_02_003746_sites_settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_06_212634_add_deleted_at_to_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_06_212634_add_deleted_at_to_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_06_213011_add_user_id_to_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_06_213011_add_user_id_to_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_06_213647_add_tags_to_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_06_213647_add_tags_to_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_08_010534_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_08_010534_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_08_010649_create_role_user_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_08_010649_create_role_user_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_10_214009_create_leads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_10_214009_create_leads_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_12_11_060707_add_address_to_leads_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_12_11_060707_add_address_to_leads_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2025_03_12_135308_create_navigations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2025_03_12_135308_create_navigations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2025_03_16_140948_create_footer_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2025_03_16_140948_create_footer_settings_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ShieldSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ShieldSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +300,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/joaopaulolndev/filament-general-settings" />
+      <path value="$PROJECT_DIR$/vendor/shipu/web-installer" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -292,6 +356,7 @@
       <workItem from="1741692864226" duration="4316000" />
       <workItem from="1741813151143" duration="8480000" />
       <workItem from="1742134636975" duration="1379000" />
+      <workItem from="1742208644449" duration="625000" />
     </task>
     <servers />
   </component>

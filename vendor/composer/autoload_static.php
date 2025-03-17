@@ -18,8 +18,8 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         '29ffe97919493792170d47eb03a68da9' => __DIR__ . '/..' . '/blade-ui-kit/blade-icons/src/helpers.php',
+        '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         '2c620c99f96a2b964346b45a4d1d1e64' => __DIR__ . '/..' . '/spatie/invade/src/functions.php',
         'e125f489d647ae664b0af7b573079de7' => __DIR__ . '/..' . '/filament/support/src/helpers.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -45,7 +45,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         '89e9938b64b06cc502d7ceca69a380fe' => __DIR__ . '/..' . '/filament/filament/src/global_helpers.php',
         'ebb446bb6d02e998480945fbbb73dc64' => __DIR__ . '/..' . '/filament/filament/src/helpers.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
-        '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0c3c22e27afa83be19b4c938f4c6e9ea' => __DIR__ . '/..' . '/spatie/laravel-backup/src/Helpers/functions.php',
@@ -160,7 +159,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
             'Spatie\\Analytics\\' => 17,
             'ShuvroRoy\\FilamentSpatieLaravelHealth\\' => 38,
             'ShuvroRoy\\FilamentSpatieLaravelBackup\\' => 38,
-            'Shipu\\WebInstaller\\' => 19,
         ),
         'R' => 
         array (
@@ -667,10 +665,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'ShuvroRoy\\FilamentSpatieLaravelBackup\\' => 
         array (
             0 => __DIR__ . '/..' . '/shuvroroy/filament-spatie-laravel-backup/src',
-        ),
-        'Shipu\\WebInstaller\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/shipu/web-installer/src',
         ),
         'RyanChandler\\BladeCaptureDirective\\Database\\Factories\\' => 
         array (
@@ -9570,22 +9564,6 @@ class ComposerStaticInit589cc0f65c3aaa7d4e9024d545bc1974
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'Shipu\\WebInstaller\\Concerns\\InstallationContract' => __DIR__ . '/..' . '/shipu/web-installer/src/Concerns/InstallationContract.php',
-        'Shipu\\WebInstaller\\Concerns\\StepContract' => __DIR__ . '/..' . '/shipu/web-installer/src/Concerns/StepContract.php',
-        'Shipu\\WebInstaller\\Forms\\Components\\ViewBorder' => __DIR__ . '/..' . '/shipu/web-installer/src/Forms/Components/ViewBorder.php',
-        'Shipu\\WebInstaller\\Forms\\Fields\\ApplicationFields' => __DIR__ . '/..' . '/shipu/web-installer/src/Forms/Fields/ApplicationFields.php',
-        'Shipu\\WebInstaller\\Forms\\Fields\\EnvironmentFields' => __DIR__ . '/..' . '/shipu/web-installer/src/Forms/Fields/EnvironmentFields.php',
-        'Shipu\\WebInstaller\\Forms\\Fields\\FolderPermissionStep' => __DIR__ . '/..' . '/shipu/web-installer/src/Forms/Fields/FolderPermissionStep.php',
-        'Shipu\\WebInstaller\\Forms\\Fields\\ServerRequirementFields' => __DIR__ . '/..' . '/shipu/web-installer/src/Forms/Fields/ServerRequirementFields.php',
-        'Shipu\\WebInstaller\\Livewire\\Installer' => __DIR__ . '/..' . '/shipu/web-installer/src/Livewire/Installer.php',
-        'Shipu\\WebInstaller\\Manager\\InstallationManager' => __DIR__ . '/..' . '/shipu/web-installer/src/Manager/InstallationManager.php',
-        'Shipu\\WebInstaller\\Middleware\\RedirectIfNotInstalled' => __DIR__ . '/..' . '/shipu/web-installer/src/Middleware/RedirectIfNotInstalled.php',
-        'Shipu\\WebInstaller\\Rules\\DatabaseConnectionRule' => __DIR__ . '/..' . '/shipu/web-installer/src/Rules/DatabaseConnectionRule.php',
-        'Shipu\\WebInstaller\\Utilities\\DatabaseConnection' => __DIR__ . '/..' . '/shipu/web-installer/src/Utilities/DatabaseConnection.php',
-        'Shipu\\WebInstaller\\Utilities\\EnvironmentHelper' => __DIR__ . '/..' . '/shipu/web-installer/src/Utilities/EnvironmentHelper.php',
-        'Shipu\\WebInstaller\\Utilities\\PermissionsChecker' => __DIR__ . '/..' . '/shipu/web-installer/src/Utilities/PermissionsChecker.php',
-        'Shipu\\WebInstaller\\Utilities\\RequirementsChecker' => __DIR__ . '/..' . '/shipu/web-installer/src/Utilities/RequirementsChecker.php',
-        'Shipu\\WebInstaller\\WebInstallerServiceProvider' => __DIR__ . '/..' . '/shipu/web-installer/src/WebInstallerServiceProvider.php',
         'ShuvroRoy\\FilamentSpatieLaravelBackup\\Components\\BackupDestinationListRecords' => __DIR__ . '/..' . '/shuvroroy/filament-spatie-laravel-backup/src/Components/BackupDestinationListRecords.php',
         'ShuvroRoy\\FilamentSpatieLaravelBackup\\Components\\BackupDestinationStatusListRecords' => __DIR__ . '/..' . '/shuvroroy/filament-spatie-laravel-backup/src/Components/BackupDestinationStatusListRecords.php',
         'ShuvroRoy\\FilamentSpatieLaravelBackup\\Enums\\Option' => __DIR__ . '/..' . '/shuvroroy/filament-spatie-laravel-backup/src/Enums/Option.php',
