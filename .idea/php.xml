@@ -161,7 +161,6 @@
       <path value="$PROJECT_DIR$/vendor/shuvroroy/filament-spatie-laravel-health" />
       <path value="$PROJECT_DIR$/vendor/shuvroroy/filament-spatie-laravel-backup" />
       <path value="$PROJECT_DIR$/vendor/joaopaulolndev/filament-edit-profile" />
-      <path value="$PROJECT_DIR$/vendor/joaopaulolndev/filament-general-settings" />
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/calebporzio/sushi" />
@@ -229,6 +228,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/joaopaulolndev/filament-general-settings" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

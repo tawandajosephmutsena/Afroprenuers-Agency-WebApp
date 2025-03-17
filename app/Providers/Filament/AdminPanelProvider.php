@@ -94,6 +94,7 @@ class AdminPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
                 \Hasnayeen\Themes\Http\Middleware\SetTheme::class,
+                \Shipu\WebInstaller\Middleware\RedirectIfNotInstalled::class,
             ])
             ->viteTheme("resources/css/filament/admin/theme.css")
             
