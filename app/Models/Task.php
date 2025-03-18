@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 
 
 class Task extends Model
@@ -78,4 +79,13 @@ class Task extends Model
              $this->attributes['completed_at'] = null;
          }
      }
+
+    protected static function booted()
+    {
+        static::creating(function ($task) {
+            if (!$task->user_id) {
+                $task->user_id = Auth::id();
+            }
+        });
+    }
 }

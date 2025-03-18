@@ -36,7 +36,7 @@ class NoteResource extends Resource
     protected static ?int $navigationSort = 4;
     protected static ?string $recordTitleAttribute = 'title';
 
-    public static function form(Form $form): Form
+    public static function form(Forms\Form $form): Forms\Form
     {
         return $form
             ->schema([

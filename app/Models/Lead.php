@@ -2,24 +2,26 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Lead extends Model
 {
+    use HasFactory, SoftDeletes;
+
     protected $fillable = [
-        'first_name',
-        'last_name',
+        'name',
         'email',
         'phone',
-        'address',
-        'service',
-        'budget_range',
-        'project_details',
-        'privacy_agreed',
+        'source',
+        'status',
+        'description',
+        'assigned_to',
     ];
-    
-    
-    protected $casts = [
-        'privacy_agreed' => 'boolean'
-    ];
+
+    public function assignedTo()
+    {
+        return $this->belongsTo(User::class, 'assigned_to');
+    }
 }

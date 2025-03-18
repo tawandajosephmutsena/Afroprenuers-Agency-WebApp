@@ -6,38 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
-      $table->id();
-
-            // Client's name (either personal or company name)
+            $table->id();
             $table->string('name');
-
-            // Client's email
             $table->string('email')->unique();
-
-            // Client's phone number
             $table->string('phone')->nullable();
-
-            // Client's physical address
-            $table->string('address')->nullable();
-
-            // Client's website URL (optional)
+            $table->text('address')->nullable();
             $table->string('website')->nullable();
-
-            // Timestamps (created_at, updated_at)
+            $table->text('description')->nullable();
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('clients');
     }

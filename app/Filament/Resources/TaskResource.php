@@ -43,6 +43,10 @@ class TaskResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Hidden::make('user_id')
+                    ->default(auth()->id())  // Remove the closure
+                    ->required()
+                    ->dehydrated(true),      // Ensure the field is included in form submission
                 Forms\Components\Group::make()
                     ->columns(3)
                     ->schema([
@@ -54,13 +58,11 @@ class TaskResource extends Resource
                         ->autofocus()
                         ->placeholder('Enter a short, descriptive title')
                         ->helperText('Title should be between 3 and 50 characters')
-                        ->placeholder('Enter a short, descriptive title')
-                        ->helperText('Title should be between 3 and 50 characters')
                         ->lazy(),
                         Forms\Components\Select::make('project_id')
-                ->relationship('project', 'name')
-                ->required(),
-                        Forms\Components\Select::make('assignee_id')
+                            ->relationship('project', 'name')
+                            ->required(),
+                        Forms\Components\Select::make('assigned_to')
                             ->relationship('assignee', 'name')
                             ->searchable()
                             ->preload()

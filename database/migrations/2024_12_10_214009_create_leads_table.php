@@ -6,27 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    
     public function up()
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email');
+            $table->string('name');
+            $table->string('email')->unique();
             $table->string('phone')->nullable();
-            $table->string('service')->nullable();
-            $table->string('budget_range')->nullable();
-            $table->text('project_details')->nullable();
-            $table->boolean('privacy_agreed')->default(false);
+            $table->enum('source', ['website', 'referral', 'social_media', 'direct'])->default('website');
+            $table->enum('status', ['new', 'contacted', 'qualified', 'proposal', 'negotiation', 'won', 'lost'])->default('new');
+            $table->text('description')->nullable();
+            $table->foreignId('assigned_to')->nullable()->constrained('users')->nullOnDelete();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('leads');
     }

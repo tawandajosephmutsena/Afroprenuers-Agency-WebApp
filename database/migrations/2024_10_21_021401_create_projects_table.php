@@ -16,6 +16,8 @@ return new class extends Migration
             $table->date('end_date')->nullable();
             $table->enum('status', ['planning', 'in_progress', 'on_hold', 'completed'])->default('planning');
             $table->foreignId('client_id')->constrained()->onDelete('cascade');
+            $table->decimal('progress', 5, 2)->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

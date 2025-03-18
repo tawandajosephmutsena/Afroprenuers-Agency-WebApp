@@ -15,11 +15,13 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('project_id')->nullable()->constrained()->cascadeOnDelete();
             $table->foreignId('assigned_to')->nullable()->constrained('users')->cascadeOnDelete();
+            $table->foreignId('parent_id')->nullable()->constrained('tasks')->cascadeOnDelete();
             $table->enum('status', ['todo', 'in_progress', 'review', 'completed'])->default('todo');
             $table->enum('priority', ['low', 'medium', 'high', 'urgent'])->default('medium');
             $table->dateTime('due_date')->nullable();
             $table->dateTime('completed_at')->nullable();
             $table->integer('order')->default(0);
+            $table->decimal('progress', 5, 2)->default(0);
             $table->json('attachments')->nullable();
             $table->timestamps();
             $table->softDeletes();
