@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\FooterSettingsResource\Pages;
 
 use App\Filament\Resources\FooterSettingsResource;
+use App\Models\FooterSettings;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +19,11 @@ class ManageFooterSettings extends EditRecord
 
     public function getRecord(): Model
     {
-        return static::getResource()::getModel()::first() ?? static::getResource()::getModel()::create();
+        return FooterSettings::firstOrCreate(
+            [],
+            [
+                'copyright_text' => '© ' . date('Y') . ' Your Company Name. All rights reserved.',
+            ]
+        );
     }
 }
