@@ -1,7 +1,6 @@
 @aware(['page'])
 
 
-
 @props([
   'image',
   'image_alt',

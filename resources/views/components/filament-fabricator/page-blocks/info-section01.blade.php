@@ -1,6 +1,10 @@
 @aware(['page'])
 
 @props([
+'image',
+'image_alt',
+'image2',
+'image_alt2',
 'heading',
 'content',
 'subhearding',
@@ -14,8 +18,35 @@
             <p class="text-gray-900 dark:text-white">{{ $content }}</p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
+
+        @php
+            $imageSrc = '';
+         if ($image instanceof \Awcodes\Curator\Models\Media) {
+             $imageSrc = url('storage/' . $image->path);
+        } elseif (is_numeric($image)) {
+             $mediaItem = \Awcodes\Curator\Models\Media::find($image);
+              $imageSrc = $mediaItem ? url('storage/' . $mediaItem->path) : '';
+        } else {
+             $imageSrc = $image;
+         }
+        @endphp
+
+            <img class="w-full rounded-lg" src="{ $imageSrc }}" alt="{{ $image_alt }}">
+
+
+            @php
+            $imageSrc2 = '';
+         if ($image2 instanceof \Awcodes\Curator\Models\Media) {
+             $imageSrc2 = url('storage/' . $image2->path);
+        } elseif (is_numeric($image2)) {
+             $mediaItem = \Awcodes\Curator\Models\Media::find($image2);
+              $imageSrc2 = $mediaItem ? url('storage/' . $mediaItem->path) : '';
+        } else {
+             $imageSrc2 = $image2;
+         }
+        @endphp
+
+            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="{ $imageSrc2 }}" alt="{{ $image_alt2 }}">
         </div>
     </div>
 </section>
