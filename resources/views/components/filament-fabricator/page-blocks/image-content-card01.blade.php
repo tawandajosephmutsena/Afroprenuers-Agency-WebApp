@@ -16,8 +16,18 @@
     <div class="mx-auto grid max-w-screen-xl rounded-lg bg-gray-50 p-4 dark:bg-gray-800 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16">
       <div class="lg:col-span-5 lg:mt-0">
        <a href="#">
-          <img class="mb-4 h-56 w-56 dark:hidden sm:h-96 sm:w-96 md:h-full md:w-full" src="{{ asset($image) }}" alt="{{ $image_alt }}" />
-          <img class="mb-4 hidden dark:block md:h-full" src="{{ asset($image) }}" alt="{{ $image_alt }}" />
+         @php
+    $imageSrc = '';
+    if ($image instanceof \Awcodes\Curator\Models\Media) {
+        $imageSrc = url('storage/' . $image->path);
+    } elseif (is_numeric($image)) {
+        $mediaItem = \Awcodes\Curator\Models\Media::find($image);
+        $imageSrc = $mediaItem ? url('storage/' . $mediaItem->path) : '';
+    } else {
+        $imageSrc = $image;
+    }
+@endphp
+<img class="mb-4 h-56 w-56 sm:h-96 sm:w-96 md:h-full md:w-full" src="{{ $imageSrc }}" alt="{{ $image_alt }}">
         </a>
       </div>
       <div class="me-auto place-self-center lg:col-span-7">
