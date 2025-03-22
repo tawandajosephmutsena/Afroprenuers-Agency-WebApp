@@ -31,7 +31,7 @@
          }
         @endphp
 
-            <img class="w-full rounded-lg" src="{ $imageSrc }}" alt="{{ $image_alt }}">
+            <img class="w-full rounded-lg" src="{{ $imageSrc }}" alt="{{ $image_alt }}">
 
 
             @php
@@ -46,7 +46,7 @@
          }
         @endphp
 
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="{ $imageSrc2 }}" alt="{{ $image_alt2 }}">
+            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="{{ $imageSrc2 }}" alt="{{ $image_alt2 }}">
         </div>
     </div>
 </section>
