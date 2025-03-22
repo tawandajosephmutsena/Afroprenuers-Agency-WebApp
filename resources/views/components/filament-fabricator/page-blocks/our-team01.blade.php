@@ -15,8 +15,19 @@
             @foreach($team_members as $member)
             <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
+                    @php
+                        $imageSrc = '';
+                        if ($member['image'] instanceof \Awcodes\Curator\Models\Media) {
+                            $imageSrc = url('storage/' . $member['image']->path);
+                        } elseif (is_numeric($member['image'])) {
+                            $mediaItem = \Awcodes\Curator\Models\Media::find($member['image']);
+                            $imageSrc = $mediaItem ? url('storage/' . $mediaItem->path) : '';
+                        } else {
+                            $imageSrc = $member['image'];
+                        }
+                    @endphp
                     <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" 
-                         src="{{ Storage::url($member['image']) }}" 
+                         src="{{ $imageSrc }}" 
                          alt="{{ $member['name'] }} Avatar">
                 </a>
                 <div class="p-5">

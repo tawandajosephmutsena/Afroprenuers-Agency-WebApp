@@ -5,9 +5,9 @@ namespace App\Filament\Fabricator\PageBlocks;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 
 class OurTeam01 extends PageBlock
 {
@@ -24,10 +24,8 @@ class OurTeam01 extends PageBlock
                     ->default('Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind'),
                 Repeater::make('team_members')
                     ->schema([
-                        FileUpload::make('image')
+                        CuratorPicker::make('image')
                             ->label('Member Photo')
-                            ->image()
-                            ->directory('team-members')
                             ->required(),
                         TextInput::make('name')
                             ->label('Full Name')
