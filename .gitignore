@@ -17,6 +17,25 @@ yarn-error.log
 /.idea
 /.vscode
 
+# Laravel storage
+/storage/app/public/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Database
+*.sqlite
+*.sqlite-journal
+/database/*.sqlite
+/database/*.sqlite-journal
+
+# Curator media uploads
+/public/media/*
+
+# Keep .gitkeep files
+!.gitkeep
+
 # Laravel specific
 /bootstrap/cache/*
 /storage/framework/cache/*
